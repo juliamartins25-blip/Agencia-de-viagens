@@ -1,6 +1,12 @@
 const btnPromocao = document.querySelector("#btn-promocao");
+
 const btnSaibaMais = document.querySelector("#btn-saiba-mais");
 const mensagemDestino = document.querySelector("#mensagem-destino");
+
+const cardParis = document.querySelector("#card-paris");
+const destaque = document.querySelector("#destino-destaque");
+const btnDestaque = document.querySelector("#btn-destaque");
+const btnDestinoDestaque = document.querySelector("#btn-destino-destaque");
 
 btnPromocao.addEventListener("click", function() {
     alert("As reservas realizadas no dia de hoje recebem uma promoção especial!");
@@ -8,4 +14,9 @@ btnPromocao.addEventListener("click", function() {
 
 btnSaibaMais.addEventListener("click", function(){
     mensagemDestino.textContent = "Pacote de 7 dias com hospedagem em hotel 4 estrelas no centro de Paris. Inclui ingressos para Torre Eiffel e Museu do Louvre, com café da manhã incluso.";
+});
+
+btnDestaque.addEventListener("click", function() {
+    cardParis.classList.toggle("destino-destaque");
+    btnDestaque.classList.toggle("btn-destino-destaque");
 });
