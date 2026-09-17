@@ -8,6 +8,11 @@ const destaque = document.querySelector("#destino-destaque");
 const btnDestaque = document.querySelector("#btn-destaque");
 const btnDestinoDestaque = document.querySelector("#btn-destino-destaque");
 
+const btnCalcular = document.querySelector("#bnt-calcular");
+const destino = document.querySelector("#destino");
+const qtdPessoas = document.querySelector("#quantidade");
+const nome = document.querySelector("#nome");
+
 btnPromocao.addEventListener("click", function() {
     alert("As reservas realizadas no dia de hoje recebem uma promoção especial!");
 });
@@ -20,3 +25,7 @@ btnDestaque.addEventListener("click", function() {
     cardParis.classList.toggle("destino-destaque");
     btnDestaque.classList.toggle("btn-destino-destaque");
 });
+
+btnCalcular.addEventListener("click", function(){
+    
+})
