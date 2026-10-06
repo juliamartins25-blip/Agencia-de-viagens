@@ -58,6 +58,8 @@ btnCalcular.addEventListener("click", function(){
 });
 
 // formulario de solicitação de reserva
+const solicitar = document.querySelector("#solicitar");
+
 const btnSolicitar = document.querySelector("#btn-solicitar");
 const formNome = document.querySelector("#form-nome");
 const formEmail = document.querySelector("#form-email");
@@ -66,8 +68,14 @@ const formQuantidade = document.querySelector("#form-quantidade");
 const formData = document.querySelector("#form-data");
 const formResultado = document.querySelector("#form-resultado");
 
-btnSolicitar.addEventListener("submit", function(evento) {
+solicitar.addEventListener("submit", function(evento) {
     evento.preventDefault();
-    
-    console.log(formNome.value, formEmail.value, formDestino.value, formQuantidade.value, formData.value);
 });
+
+btnSolicitar.addEventListener("click", function(){
+    if (formNome.value === "" || formEmail.value === "" || formDestino.value === "" || formQuantidade === "" || formData === ""){
+        alert("Preencha todos os campos para proceguir!");
+    } else {
+        formResultado.textContent = `Olá ${formNome.value}! Sua viagem para ${formDestino.value} foi registrada para o dia ${formData.value}. Quantidade de viajantes: ${formQuantidade.value}.`;
+    }
+})
